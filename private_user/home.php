@@ -90,7 +90,8 @@ if(!isset($_SESSION["email_address"])){
 
 </head>
 
-<body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
+<body style="padding:0px; margin:0px; background-color: #ccc; font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
+
   <?php 
 
      require_once("include/connection.php");
@@ -111,7 +112,7 @@ if(!isset($_SESSION["email_address"])){
   <!-- Start your project here-->
 <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color fixed-top">
-    <a class="navbar-brand" href="#"><img src="js/img/Files_Download.png" width="33px" height="33px"> <font color="#F0B56F">F</font>ile <font color="#F0B56F">M</font>anagement <font color="#F0B56F">S</font>ystem</a>
+    <a class="navbar-brand" href="#"><img src="js/img/ocdLogo.png" width="33px" height="auto"><font color="#0000000"> OCD Caraga - Policy Development and Planning Section</font></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
     aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

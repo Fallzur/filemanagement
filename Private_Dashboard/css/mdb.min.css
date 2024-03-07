@@ -895,7 +895,7 @@ h6 {
   background-color: #ffb74d !important;
 }
 .orange.lighten-1 {
-  background-color: #dd760f !important;
+  background-color: #fff9f2c2 !important;
 }
 .orange {
   background-color: #ff9800 !important;
@@ -5521,7 +5521,7 @@ table.table a.btn.btn-danger {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 .btn-warning {
-  background-color: #b17703 !important;
+  background-color: #231e54 !important;
   color: #fff;
 }
 .btn-warning:hover {
