@@ -386,7 +386,7 @@ input[type=file] {
            <label for="subject" class="">Upload File</label>
           <input type="file" name="myfile"> <br>
           <button  type="submit" class="btn btn-info btn-rounded btn-block my-4 waves-effect z-depth-0"  name="save" type="submit">UPLOAD</button>
-         <footer style="font-size: 12px"><b>File Type:</b><font color="red"><i>.docx .doc .pptx .ppt .xlsx .xls .pdf .odt</i></font></footer>
+         <footer style="font-size: 12px"><b>File Type:</b><font color="red"><i>.docx .doc .pptx .ppt .xlsx .xls .pdf .odt, jpg, png, jpeg</i></font></footer>
         </form>
       </div>
     </div>

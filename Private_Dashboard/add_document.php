@@ -366,7 +366,7 @@ position:absolute;
       ?>
      
       <td width="20%"><?php echo  $name; ?></td>
-      <td><?php echo floor($size / 1000) . ' KB'; ?></td>
+      <td><?php echo round($size / 1048576, 2) . ' MB'; ?></td>
        <td><?php echo $uploads; ?></td>
        <td><?php echo $status; ?></td>
        <td><?php echo $time; ?></td>
