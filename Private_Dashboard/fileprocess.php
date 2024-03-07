@@ -23,6 +23,7 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
     if (!in_array($file_extension, $allowed_extensions)) {
         echo "Invalid file type! Allowed file types are: .docx, .doc, .pptx, .ppt, .xlsx, .xls, .pdf, .odt, .jpg, .jpeg, .png";
         echo '<script>document.getElementById("myfile").style.borderColor = "red";</script>'; // Change border color to red
+        echo '<script>document.getElementById("save-form").addEventListener("submit", function(event){event.preventDefault();});</script>'; // Prevent form submission
     } elseif ($size > 2000000000) { // file shouldn't be larger than 2 Gigabytes
         echo "File too large!";
     } else {
@@ -30,7 +31,11 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
         $counter = mysqli_num_rows($query);
 
         if ($counter == 1) {
-            echo '<script type="text/javascript">alert("File already uploaded");</script>';
+            echo '
+            <script type="text/javascript">
+                alert("File already uploaded");
+                window.location = "add_document.php";
+            </script>';
         } else {
             date_default_timezone_set("Asia/Manila");
             $time = date("M-d-Y h:i A", strtotime("+0 HOURS"));
@@ -39,7 +44,11 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
             if (move_uploaded_file($file, $destination)) {
                 $sql = "INSERT INTO upload_files (name, size, download, timers, admin_status, email) VALUES ('$filename', $size, 0, '$time', 'Admin', '$user')";
                 if (mysqli_query($conn, $sql)) {
-                    echo '<script type="text/javascript">alert("File uploaded successfully!");</script>';
+                    echo '
+                    <script type="text/javascript">
+                        alert("File uploaded successfully!");
+                        window.location = "add_document.php";
+                    </script>';
                 }
             } else {
                 echo "Failed to upload files!";
